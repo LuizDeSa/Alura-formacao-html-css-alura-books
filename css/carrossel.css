@@ -1,0 +1,155 @@
+.carrossel__titulo{
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 .8em 0;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: .5em 0;
+}
+
+.card{
+    background-color: var(--branco);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 1em;
+    border-radius: 10px;
+
+    padding: 1em;
+}
+
+.card__body{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 12px;
+}
+
+.card__descricao{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.card__titulo{
+    color: var(--laranja);   
+    font-weight: 700;
+}
+
+.card__subtitulo{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+.card__texto{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.card__footer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__footer .lista__botoes{
+    display: flex;
+    column-gap: 20px;
+}
+
+.card__footer .card__link{
+    background-color: var(--laranja);
+    color: var(--branco);
+    text-decoration: none;
+    padding: 1em 2.2em;
+    font-weight: 700;
+}
+
+.card__estrelas{
+    width: 91px;
+}
+
+@media screen and (min-width: 1024px) {
+    .carrossel__titulo{
+        font-size: 36px;
+    }
+
+    .swiper{
+        width: 60%;
+    }
+
+    .swiper-pagination{
+        margin: 2em 0 3em 0;
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        display: flex;
+        top: 60%;
+        color: var(--azul);
+
+        /* background: var(--azul-degrade);
+        border-radius: 60em;
+        height: 4em;
+        width: 4em;
+        color: white;
+        font-size: 12px; */
+        
+    }
+
+    .card{
+        width: 40%;
+        margin: 2em auto;
+    }
+
+    .card__footer .card__link:active{
+        background-color: var(--azul);
+    }
+
+}
+
+@media screen and (min-width: 1728px) {
+    .carrossel__container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 15vw 3em 15vw;
+
+    }
+
+    .swiper{
+        width: 45%;
+        height: 330px;
+    }
+
+    .swiper-pagination {
+        margin: 1em 0;
+    }
+
+    .card{
+        width: 60%;
+        margin-left: 3em;
+        /* margin: 2em auto; */
+    }
+
+    .card .card__titulo{
+        font-size: 32px;
+    }
+
+    .card .card__texto{
+        font-size: 16px;
+    }
+}

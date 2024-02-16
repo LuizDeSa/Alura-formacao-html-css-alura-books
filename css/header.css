@@ -1,0 +1,186 @@
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cabecalho__titulo{
+    display: none;
+}
+
+.cabecalho__item{
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__menu-icone{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 1.5em;
+}
+
+.cabecalho__item img{
+    padding: 1em;
+}
+
+/* Meu hamburguer */
+.cabecalho__menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.cabecalho__item .cabecalho__checkbox{
+    display: none;
+}
+/* seleciona os elementos que seguem o primeiro */
+.cabecalho__item .cabecalho__checkbox:checked~.cabecalho__menu{
+    display: block;
+}
+
+.cabecalho__item .cabecalho__checkbox:checked+label>.cabecalho__menu-icone{
+    background-image: url("../img/Menu\ Aberto.svg");
+}
+
+.cabecalho__item .cabecalho__checkbox:checked+label{
+    background: var(--azul-degrade);
+    padding: 0.5em 0;
+}
+
+.cabecalho__menu .lista__titulo, .cabecalho__menu .lista__item{
+    /* display: inline-block; */
+    padding: 1rem;
+    background-color: var(--branco);
+}
+
+.cabecalho__menu .lista__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.cabecalho__menu .lista__link{
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    /* especifica a cor de preenchimento dos caracteres do texto. */
+    /* text-fill-color e color são iguais, mas a text-fill-color tem precedência sobre a color */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
+
+.opcoes{
+    display: none;
+}
+
+.cabecalho__item .item__texto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .cabecalho__titulo{
+        display: block;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .cabecalho__titulo-negrito{
+        font-weight: 700;
+    }
+
+    .cabecalho__menu-icone{
+        display: none;
+    }
+
+    .cabecalho__item-transparente{
+        display: none;
+    }
+
+    .opcoes{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+    }
+
+
+    .opcoes__checkbox{
+        display: none;
+    }
+
+    .opcoes__checkbox:checked~.lista__categorias{
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__item{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__item a{
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .lista__categorias{
+        display: none;
+        position: absolute;
+        top: 85%;
+    }
+
+    .opcoes__checkbox:checked + label{
+        background: var(--azul-degrade);
+        display: inline-block;
+        padding: 1em 0em;
+        color: white;
+    }
+
+    .lista__categorias .lista__item{
+        background-color: white;
+    }
+
+    .lista__categorias .lista__link{
+        text-decoration: none;
+        display: block;
+        padding: 1.4em 1em;
+        color: var(--preto);
+    }
+
+    .lista__categorias .lista__link:hover{
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho{
+        padding-left: 2em;
+        padding-right: 4em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+        margin-left: 2em;
+    }
+
+    .cabecalho__item .item__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+    }
+    .cabecalho__item .item__texto{
+        display: block;
+    }
+}
+
